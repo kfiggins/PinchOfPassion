@@ -9,11 +9,16 @@ const Layout = ({ location, title, children }) => {
 
   if (location.pathname === rootPath) {
     header = (
-      <h1
+      <p
         style={{
-          ...scale(1.5),
-          marginBottom: rhythm(1.5),
-          marginTop: 0,
+          margin: 0,
+          fontFamily: "Raleway, sans-serif",
+          lineHeight: "60px",
+          fontSize: "60px",
+          fontWeight: "200",
+          fontFamily: "Raleway', sans-serif",
+          textTransform: "uppercase",
+          letterSpacing: "10px"
         }}
       >
         <Link
@@ -26,7 +31,7 @@ const Layout = ({ location, title, children }) => {
         >
           {title}
         </Link>
-      </h1>
+      </p>
     )
   } else {
     header = (
@@ -54,7 +59,7 @@ const Layout = ({ location, title, children }) => {
       style={{
         marginLeft: `auto`,
         marginRight: `auto`,
-        maxWidth: rhythm(24),
+        maxWidth: rhythm(25),
         padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
       }}
     >
