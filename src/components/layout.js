@@ -2,8 +2,8 @@ import React from "react"
 import { Link } from "gatsby"
 
 const menuItems = [
-  { title: "About Me" },
-  { title: "Contact Me" }
+  { title: "About Me", route: "about" },
+  { title: "Contact Me", route: "contact" }
 ]
 
 const Layout = ({ location, title, children }) => {
@@ -68,9 +68,11 @@ const Layout = ({ location, title, children }) => {
       }}
     >
       <header style={{ display: "flex", alignItems: "center", flexDirection: "column" }}>{header}</header>
-      <div style={{ borderTop: "solid 1px black", borderBottom: "solid 1px black", height: "60px", marginTop: "30px", display: "flex", justifyContent: "center", alignItems: "center" }}>
+      <div style={{ borderTop: "solid 1px black", borderBottom: "solid 1px black", height: "66px", marginTop: "30px", display: "flex", justifyContent: "center", alignItems: "center" }}>
         {menuItems.map((item, index) =>
-          <div key={index} style={{ padding: "0 20px", fontFamily: "Monsterat", letterSpacing: "2px", textTransform: "uppercase", fontSize: "11px" }}>{item.title}</div>
+          <Link style={{ textDecoration: "none" }} to={`/${item.route}/`} >
+            <div key={index} style={{ padding: "0 20px", fontFamily: "Montserrat", letterSpacing: "2px", textTransform: "uppercase", fontSize: "11px", color: "#333333" }}>{item.title}</div>
+          </Link>
         )}
       </div>
       <main>{children}</main>
