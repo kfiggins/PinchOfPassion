@@ -20,6 +20,10 @@ const typography = new Typography(
       {
         name: "Caveat",
         styles: ["400", "700"]
+      },
+      {
+        name: "Lato",
+        styles: ["400", "700"]
       }
     ],
     headerFontFamily: ["Raleway", "Merriweather", "Georgia", "serif"],
