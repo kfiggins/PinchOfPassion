@@ -1,22 +1,23 @@
 import React from "react"
 import { Link } from "gatsby"
 
-import { rhythm, scale } from "../utils/typography"
+const menuItems = [
+  { title: "About Me" },
+  { title: "Contact Me" }
+]
 
 const Layout = ({ location, title, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
-  let header
 
-  if (location.pathname === rootPath) {
-    header = (
-      <p
+  // if (location.pathname === rootPath) {
+  const header = (
+    <>
+      <h1
         style={{
           margin: 0,
-          fontFamily: "Raleway, sans-serif",
           lineHeight: "60px",
           fontSize: "60px",
           fontWeight: "200",
-          fontFamily: "Raleway', sans-serif",
           textTransform: "uppercase",
           letterSpacing: "10px"
         }}
@@ -31,44 +32,52 @@ const Layout = ({ location, title, children }) => {
         >
           {title}
         </Link>
-      </p>
-    )
-  } else {
-    header = (
-      <h3
-        style={{
-          fontFamily: `Montserrat, sans-serif`,
-          marginTop: 0,
-        }}
-      >
-        <Link
-          style={{
-            boxShadow: `none`,
-            textDecoration: `none`,
-            color: `inherit`,
-          }}
-          to={`/`}
-        >
-          {title}
-        </Link>
-      </h3>
-    )
-  }
+      </h1>
+      <div style={{ fontFamily: "Caveat", fontSize: "18px", marginTop: "10px" }}>=balancing health and happiness=</div>
+    </>
+  )
+  // } else {
+  //   header = (
+  //     <h3
+  //       style={{
+  //         fontWeight: "200",
+  //         letterSpacing: "10px",
+  //         marginTop: 0,
+  //       }}
+  //     >
+  //       <Link
+  //         style={{
+  //           boxShadow: `none`,
+  //           textDecoration: `none`,
+  //           color: `inherit`,
+  //         }}
+  //         to={`/`}
+  //       >
+  //         {title}
+  //       </Link>
+  //     </h3>
+  //   )
+  // }
+
+
+
   return (
     <div
       style={{
-        marginLeft: `auto`,
-        marginRight: `auto`,
-        maxWidth: rhythm(25),
-        padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
+        padding: "20px 40px"
       }}
     >
-      <header>{header}</header>
+      <header style={{ display: "flex", alignItems: "center", flexDirection: "column" }}>{header}</header>
+      <div style={{ borderTop: "solid 1px black", borderBottom: "solid 1px black", height: "60px", marginTop: "30px", display: "flex", justifyContent: "center", alignItems: "center" }}>
+        {menuItems.map((item, index) =>
+          <div key={index} style={{ padding: "0 20px", fontFamily: "Monsterat", letterSpacing: "2px", textTransform: "uppercase", fontSize: "11px" }}>{item.title}</div>
+        )}
+      </div>
       <main>{children}</main>
       <footer>
-        © {new Date().getFullYear()}, Built with
+        © {new Date().getFullYear()}, Built by
         {` `}
-        <a href="https://www.gatsbyjs.org">Gatsby</a>
+        <a href="https://www.linkedin.com/in/kylerfiggins/">Kyler🐐</a>
       </footer>
     </div>
   )
