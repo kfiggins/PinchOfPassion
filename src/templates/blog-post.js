@@ -1,14 +1,16 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 
-import Home from "../components/home"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import { FacebookProvider, Comments } from "react-facebook"
 
 const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata.title
   const { previous, next } = pageContext
+  console.log(location)
+  const recipe = post.frontmatter.recipe
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -36,14 +38,32 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           </p>
         </header>
         <section dangerouslySetInnerHTML={{ __html: post.html }} />
+        {recipe && (
+          <div>
+            <div style={{ fontWeight: "bold" }}>{post.frontmatter.title}</div>
+            <div>Prep Time: {recipe.prepTime}</div>
+            <div>Cook Time: {recipe.cookTime}</div>
+            <div>Servings: {recipe.servings}</div>
+            <div>
+              <ol>
+                {recipe.ingredients &&
+                  recipe.ingredients.map((item, index) => (
+                    <li key={index}>{item}</li>
+                  ))}
+              </ol>
+            </div>
+            <div>{recipe.instructions}</div>
+          </div>
+        )}
+        <FacebookProvider appId="560650034801447">
+          <Comments href={location.href} />
+        </FacebookProvider>
         <hr
           style={{
-            marginBottom: "5px"
+            marginBottom: "5px",
           }}
         />
-        <footer>
-          <Home />
-        </footer>
+        <footer></footer>
       </article>
 
       <nav>
@@ -93,6 +113,13 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        recipe {
+          prepTime
+          cookTime
+          servings
+          ingredients
+          instructions
+        }
       }
     }
   }
