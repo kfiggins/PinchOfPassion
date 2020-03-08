@@ -1,4 +1,5 @@
 import React from "react"
+import Image from "gatsby-image"
 import { Link, graphql } from "gatsby"
 
 import Layout from "../components/layout"
@@ -113,6 +114,13 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        featurePhoto {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
         recipe {
           prepTime
           cookTime
