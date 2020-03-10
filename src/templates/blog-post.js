@@ -44,8 +44,9 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
             <div style={{ fontWeight: "bold" }}>{post.frontmatter.title}</div>
             <div>Prep Time: {recipe.prepTime}</div>
             <div>Cook Time: {recipe.cookTime}</div>
-            <div>Servings: {recipe.servings}</div>
+            {recipe.servings && <div>Servings: recipe.servings</div>}
             <div>
+              <h4>Ingredients</h4>
               <ol>
                 {recipe.ingredients &&
                   recipe.ingredients.map((item, index) => (
@@ -53,7 +54,24 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
                   ))}
               </ol>
             </div>
-            <div>{recipe.instructions}</div>
+            <div>
+              <h4>Instructions</h4>
+              <ol>
+                {recipe.instructions &&
+                  recipe.instructions.map((item, index) => (
+                    <li key={index}>{item}</li>
+                  ))}
+              </ol>
+            </div>
+            <div>
+              <h4>Notes</h4>
+              <ul>
+                {recipe.notes &&
+                  recipe.notes.map((item, index) => (
+                    <li key={index}>{item}</li>
+                  ))}
+              </ul>
+            </div>
           </div>
         )}
         <FacebookProvider appId="560650034801447">
@@ -127,6 +145,7 @@ export const pageQuery = graphql`
           servings
           ingredients
           instructions
+          notes
         }
       }
     }

@@ -1,6 +1,6 @@
 ---
 title: The Best Chocolate Chip Cookies
-date: "2020-03-06T22:40:32.169Z"
+date: "2020-02-27T22:40:32.169Z"
 description: THE BEST Chocolate chip cookies Ever! The perfect balance of sweet and salty with a richness that leaves you craving more. They are perfectly golden and crispy on the very edges and soft and slightly gooey just in the center. They last for days and they are an all around crowd pleaser. Make sure you make two batches or you’ll regret it!
 featurePhoto: "./main-cookie.jpg"
 recipe:
@@ -20,36 +20,31 @@ recipe:
         "1 tsp baking soda",
         "1- 1 1/2 cups semisweet chocolate chips",
       ],
-    instructions: "In large bowl, cream together butter and sugar.
-      Stir in eggs and vanilla.
-      Combine dry ingredients in medium bowl.
-      Add dry ingredients to butter mixture and mix thoroughly.
-      Pour in chocolate chips and mix well.
-      Cover and chill for 2+ hours.
-      Scoop large dough balls onto baking sheet.
-      Bake 350F for 8-11 minutes, watching carefully for the golden edges.
-      Enjoy with a glass of milk and some friends.
-      Notes
-
-      Softened and melty butter works best for me.
-
-      Half white and half dark brown sugar is perfect. (make sure you pack that brown sugar into the measuring cup. Don’t skimp.)
-
-      Cream your butter and sugar for at least 5 minutes until it’s sort of whipped/fluffy.
-
-      Use regular, basic white flour, but do not add too much! Use less than you think you should and it will be perfect.
-
-      Add a little extra salt. Magic happens when you balance your salt with your sugars and fats. If one of them is overdone, the whole thing is off balance and it’s totally noticeable. Nobody wants cookies that are too sweet or too salty.
-
-      Semi-sweet chocolate chips are the only way to go. Milk chocolate is too sweet and messes with your balance (as explained above), and dark chocolate ones can be good to some people (I know some people are die-hard dark chocolate lovers, and I enjoy it on occasion myself), but is often too bitter for your average cookie-eater. Semi-sweet is the sweet spot. You can use a high quality bar of chocolate and chop it for a varied texture, but the chips are much easier and it really doesn’t add enough to make it worth it. Plus that can be more expensive.
-
-      Mix with an electric hand mixer, or a fork. Don’t use a wooden spoon, it never does the trick.
-
-      This part is rough, but you have to chill the dough for best baking results! If you don’t, your cookie will spread too much and it won’t have that magical, famous chewy golden edges/top with the perfect soft, almost doughy middle. It’ll cook too evenly! And we don’t want that. We want contrast people!
-
-      Next, once your dough has cooled for at least two hours, go through the laborious task of scooping it out with a cookie scooper. The cookie scooper makes a taller dough ball than you usually would with your hands, and it also makes the shape of the dough perfect for the said crispy/gooeyness to happen. If you don’t have one, then on top of each medium-sized round ball of dough, add a smaller round ball of dough directly on top, making it look like a headless snowman. I can’t explain it, but it makes it so much better! The cookie will be thicker and chewier.
-
-      Then you’ll bake them. 350F is perfect. There’s no perfect time, it’s somewhere between 8-11 minutes. You just have to watch them and wait for the edges and small bits of the center to get golden. It depends on how big your cookies are, how cold the dough was, and how hot your oven cooks. Then pull them out. Don’t wait too long. The chewiness comes from the slightly underdone center, it’s absolutely necessary.",
+    instructions:
+      [
+        "In large bowl, cream together butter and sugar.",
+        "Stir in eggs and vanilla.",
+        "Combine dry ingredients in medium bowl.",
+        "Add dry ingredients to butter mixture and mix thoroughly.",
+        "Pour in chocolate chips and mix well.",
+        "Cover and chill for 2+ hours.",
+        "Scoop large dough balls onto baking sheet.",
+        "Bake 350F for 8-11 minutes, watching carefully for the golden edges.",
+        "Enjoy with a glass of milk and some friends.",
+      ],
+    notes:
+      [
+        "Softened and melty butter works best for me.",
+        "Half white and half dark brown sugar is perfect. (make sure you pack that brown sugar into the measuring cup. Don’t skimp.)",
+        "Cream your butter and sugar for at least 5 minutes until it’s sort of whipped/fluffy.",
+        "Use regular, basic white flour, but do not add too much! Use less than you think you should and it will be perfect.",
+        "Add a little extra salt. Magic happens when you balance your salt with your sugars and fats. If one of them is overdone, the whole thing is off balance and it’s totally noticeable. Nobody wants cookies that are too sweet or too salty.",
+        "Semi-sweet chocolate chips are the only way to go. Milk chocolate is too sweet and messes with your balance (as explained above), and dark chocolate ones can be good to some people (I know some people are die-hard dark chocolate lovers, and I enjoy it on occasion myself), but is often too bitter for your average cookie-eater. Semi-sweet is the sweet spot. You can use a high quality bar of chocolate and chop it for a varied texture, but the chips are much easier and it really doesn’t add enough to make it worth it. Plus that can be more expensive.",
+        "Mix with an electric hand mixer, or a fork. Don’t use a wooden spoon, it never does the trick.",
+        "This part is rough, but you have to chill the dough for best baking results! If you don’t, your cookie will spread too much and it won’t have that magical, famous chewy golden edges/top with the perfect soft, almost doughy middle. It’ll cook too evenly! And we don’t want that. We want contrast people!",
+        "Next, once your dough has cooled for at least two hours, go through the laborious task of scooping it out with a cookie scooper. The cookie scooper makes a taller dough ball than you usually would with your hands, and it also makes the shape of the dough perfect for the said crispy/gooeyness to happen. If you don’t have one, then on top of each medium-sized round ball of dough, add a smaller round ball of dough directly on top, making it look like a headless snowman. I can’t explain it, but it makes it so much better! The cookie will be thicker and chewier.",
+        "Then you’ll bake them. 350F is perfect. There’s no perfect time, it’s somewhere between 8-11 minutes. You just have to watch them and wait for the edges and small bits of the center to get golden. It depends on how big your cookies are, how cold the dough was, and how hot your oven cooks. Then pull them out. Don’t wait too long. The chewiness comes from the slightly underdone center, it’s absolutely necessary.",
+      ],
   }
 ---
 
