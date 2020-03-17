@@ -4,7 +4,7 @@ import THEME from "../../theme"
 
 export default () => (
   <div style={{ textAlign: "center", marginTop: 40 }}>
-    <Link to={`#children`}>
+    <Link className="gatsby-resp-image-link" to={`#children`}>
       <span style={{ padding: 10 }}>
         <svg
           width={THEME.callToActionButton.width}

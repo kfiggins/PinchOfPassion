@@ -2,6 +2,7 @@ import * as React from "react"
 import Image, { FluidObject } from "gatsby-image"
 import Card from "@material-ui/core/Card"
 import Responsive from "react-responsive"
+import { FacebookProvider, Comments } from "react-facebook"
 
 import THEME from "../../theme"
 import FabButton from "../shared/FabButton"
@@ -12,6 +13,8 @@ const Default = props => <Responsive {...props} minWidth={768} />
 interface IContentAreaProps {
   children: React.ReactNode
   title: string
+  recipe: any
+  location: any
 }
 
 interface IHeaderArea {
@@ -22,9 +25,11 @@ interface IBlogPostLayout {
   children: React.ReactNode
   title: string
   cover: FluidObject
+  recipe: any
+  location: any
 }
 
-const ContentArea = ({ title, children }: IContentAreaProps) => (
+const ContentArea = ({ title, children, recipe, location }: IContentAreaProps) => (
   <>
     <Default>
       <Card style={{ padding: 50 }}>
@@ -32,6 +37,44 @@ const ContentArea = ({ title, children }: IContentAreaProps) => (
           {title}
         </h1>
         {children}
+        {recipe && (
+          <div>
+            <div style={{ fontWeight: "bold" }}>{title}</div>
+            <div>Prep Time: {recipe.prepTime}</div>
+            <div>Cook Time: {recipe.cookTime}</div>
+            {recipe.servings && <div>Servings: recipe.servings</div>}
+            <div>
+              <h4>Ingredients</h4>
+              <ol>
+                {recipe.ingredients &&
+                  recipe.ingredients.map((item, index) => (
+                    <li key={index}>{item}</li>
+                  ))}
+              </ol>
+            </div>
+            <div>
+              <h4>Instructions</h4>
+              <ol>
+                {recipe.instructions &&
+                  recipe.instructions.map((item, index) => (
+                    <li key={index}>{item}</li>
+                  ))}
+              </ol>
+            </div>
+            <div>
+              <h4>Notes</h4>
+              <ul>
+                {recipe.notes &&
+                  recipe.notes.map((item, index) => (
+                    <li key={index}>{item}</li>
+                  ))}
+              </ul>
+            </div>
+          </div>
+        )}
+        <FacebookProvider appId="560650034801447">
+          <Comments href={location.href} />
+        </FacebookProvider>
       </Card>
     </Default>
     <Mobile>
@@ -48,6 +91,44 @@ const ContentArea = ({ title, children }: IContentAreaProps) => (
           {title}
         </h1>
         {children}
+        {recipe && (
+          <div>
+            <div style={{ fontWeight: "bold" }}>{title}</div>
+            <div>Prep Time: {recipe.prepTime}</div>
+            <div>Cook Time: {recipe.cookTime}</div>
+            {recipe.servings && <div>Servings: recipe.servings</div>}
+            <div>
+              <h4>Ingredients</h4>
+              <ol>
+                {recipe.ingredients &&
+                  recipe.ingredients.map((item, index) => (
+                    <li key={index}>{item}</li>
+                  ))}
+              </ol>
+            </div>
+            <div>
+              <h4>Instructions</h4>
+              <ol>
+                {recipe.instructions &&
+                  recipe.instructions.map((item, index) => (
+                    <li key={index}>{item}</li>
+                  ))}
+              </ol>
+            </div>
+            <div>
+              <h4>Notes</h4>
+              <ul>
+                {recipe.notes &&
+                  recipe.notes.map((item, index) => (
+                    <li key={index}>{item}</li>
+                  ))}
+              </ul>
+            </div>
+          </div>
+        )}
+        <FacebookProvider appId="560650034801447">
+          <Comments href={location.href} />
+        </FacebookProvider>
       </Card>
     </Mobile>
   </>
@@ -66,7 +147,7 @@ const HeaderArea = ({ cover }: IHeaderArea) => {
   )
 }
 
-export default ({ title, cover, children }: IBlogPostLayout) => {
+export default ({ title, cover, children, recipe, location }: IBlogPostLayout) => {
   return (
     <div style={{ backgroundColor: THEME.blogPost.layout.backgroundColor }}>
       <Default>
@@ -81,12 +162,12 @@ export default ({ title, cover, children }: IBlogPostLayout) => {
           }}
         >
           <HeaderArea cover={cover} />
-          <ContentArea title={title}>{children}</ContentArea>
+          <ContentArea title={title} recipe={recipe} location={location}>{children}</ContentArea>
         </div>
       </Default>
       <Mobile>
         <HeaderArea cover={cover} />
-        <ContentArea title={title}>{children}</ContentArea>
+        <ContentArea title={title} recipe={recipe} location={location}>{children}</ContentArea>
       </Mobile>
     </div>
   )

@@ -5,7 +5,11 @@ import THEME from "../../theme"
 
 export default () => (
   <div style={{ textAlign: "right" }}>
-    <Link to={`/about/`} style={{ textDecoration: "none" }}>
+    <Link
+      className="gatsby-resp-image-link"
+      to={`/about/`}
+      style={{ textDecoration: "none" }}
+    >
       <Button
         variant="outlined"
         style={{

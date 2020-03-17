@@ -21,7 +21,7 @@ export default ({ author }: IProps) => {
       alignItems="center"
       direction={"column"}
     >
-      <Link to="/">
+      <Link className="gatsby-resp-image-link" to="/">
         <Avatar
           style={{
             alignItems: "baseline",

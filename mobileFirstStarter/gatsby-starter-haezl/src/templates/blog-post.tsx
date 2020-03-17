@@ -4,6 +4,7 @@ import Layout from "../components/layouts/blog-post-layout"
 import { FluidObject } from "gatsby-image"
 
 interface IBlogPost {
+  location: any,
   data: {
     markdownRemark: {
       html: string
@@ -14,12 +15,21 @@ interface IBlogPost {
             fluid: FluidObject
           }
         }
+        recipe: {
+          prepTime: number
+          cookTime: number
+          servings: number
+          ingredients: []
+          instructions: []
+          notes: []
+        }
       }
     }
   }
 }
 
-export default ({ data }: IBlogPost) => {
+export default ({ data, location }: IBlogPost) => {
+  console.log(location)
   const node = data.markdownRemark
   const cover =
     node.frontmatter.cover && node.frontmatter.cover.childImageSharp
@@ -27,7 +37,7 @@ export default ({ data }: IBlogPost) => {
       : null
 
   return (
-    <Layout title={node.frontmatter.title} cover={cover}>
+    <Layout title={node.frontmatter.title} cover={cover} recipe={node.frontmatter.recipe} location={location}>
       {
         // tslint:disable:react-no-dangerous-html
         <div dangerouslySetInnerHTML={{ __html: node.html }} />
@@ -52,7 +62,23 @@ export const query = graphql`
             }
           }
         }
+        recipe {
+          prepTime
+          cookTime
+          servings
+          ingredients
+          instructions
+          notes
+        }
       }
     }
   }
 `
+
+      // featurePhoto {
+        //   childImageSharp {
+        //     fluid {
+        //       ...GatsbyImageSharpFluid
+        //     }
+        //   }
+        // }
