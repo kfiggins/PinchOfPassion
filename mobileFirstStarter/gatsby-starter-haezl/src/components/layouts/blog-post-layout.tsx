@@ -45,12 +45,12 @@ const ContentArea = ({ title, children, recipe, location }: IContentAreaProps) =
             {recipe.servings && <div>Servings: recipe.servings</div>}
             <div>
               <h4>Ingredients</h4>
-              <ol>
+              <ul>
                 {recipe.ingredients &&
                   recipe.ingredients.map((item, index) => (
                     <li key={index}>{item}</li>
                   ))}
-              </ol>
+              </ul>
             </div>
             <div>
               <h4>Instructions</h4>
@@ -99,12 +99,12 @@ const ContentArea = ({ title, children, recipe, location }: IContentAreaProps) =
             {recipe.servings && <div>Servings: recipe.servings</div>}
             <div>
               <h4>Ingredients</h4>
-              <ol>
+              <ul>
                 {recipe.ingredients &&
                   recipe.ingredients.map((item, index) => (
                     <li key={index}>{item}</li>
                   ))}
-              </ol>
+              </ul>
             </div>
             <div>
               <h4>Instructions</h4>
