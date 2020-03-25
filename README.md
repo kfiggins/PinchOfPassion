@@ -1,5 +1,5 @@
 <h1 align="center">
-    <img alt="haezl" title="haezl" src="static/img/me.png" width="100"> </br>
+    <img alt="haezl" title="haezl" src="static/img/me.jpg" width="100"> </br>
     gatsby-starter-haezl
 </h1>
 

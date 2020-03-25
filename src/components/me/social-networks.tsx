@@ -30,8 +30,8 @@ export default ({ networks }: ISocialNetworks) => (
             height: THEME.networkButton.height,
           }}
           className="gatsby-resp-image-link"
-          fgColor={THEME.networkButton.color}
-          bgColor={THEME.networkButton.backgroundColor}
+          fgColor={"white"}
+          // bgColor={THEME.networkButton.backgroundColor}
           target="_blank"
           url={networkUrl}
         />
