@@ -1,8 +1,8 @@
 ---
-title: The Best Chocolate Chip Cookies
+title: The BEST Chocolate Chip Cookies
 date: "2020-02-27T22:40:32.169Z"
 description: THE BEST Chocolate chip cookies Ever! The perfect balance of sweet and salty with a richness that leaves you craving more. They are perfectly golden and crispy on the very edges and soft and slightly gooey just in the center. They last for days and they are an all around crowd pleaser. Make sure you make two batches or you’ll regret it!
-featurePhoto: "./main-cookie.jpg"
+cover: "./main-cookie.jpg"
 recipe:
   {
     prepTime: 130,
@@ -48,7 +48,6 @@ recipe:
   }
 ---
 
-![Best Chocolate Chip Cookie](./main-cookie.jpg)
 I know. It’s quite a claim. Trust me, these are the best. Truly.
 
 Chocolate chip cookies are so heavily analyzed and debated in any setting involving people who bake (and people who eat).

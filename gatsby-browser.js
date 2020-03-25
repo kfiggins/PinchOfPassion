@@ -1,5 +1,9 @@
-// custom typefaces
-// import "typeface-montserrat"
-// import "typeface-merriweather"
+import "./src/styles/global.css"
+require("prismjs/themes/prism-solarizedlight.css")
 
-import "prismjs/themes/prism.css"
+// export const onServiceWorkerUpdateReady = () => {
+// console.log(
+//   "onServiceWorkerUpdateReady hook triggered: force reloading page."
+// )
+// window.location.reload(true)
+// }
