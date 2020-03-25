@@ -46,6 +46,7 @@ const HeaderArea = ({ data, styles }: IHeaderArea) => (
   <div
     style={{
       backgroundImage: THEME.index.header.backgroundImage,
+      backgroundSize: "cover"
     }}
   >
     <AboutButton />
@@ -60,7 +61,7 @@ const HeaderArea = ({ data, styles }: IHeaderArea) => (
       <SocialNetworks networks={data.site.siteMetadata.networks} />
       <CallToActionButton />
     </div>
-  </div>
+  </div >
 )
 
 const ContentArea = ({ children }: { children: React.ReactNode }) => (
