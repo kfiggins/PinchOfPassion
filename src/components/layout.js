@@ -2,6 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 
 const menuItems = [
+  { title: "Recipes", route: "" },
   { title: "About Me", route: "about" },
   { title: "Contact Me", route: "contact" },
 ]
@@ -66,7 +67,7 @@ const Layout = ({ location, title, children }) => {
   return (
     <div
       style={{
-        padding: "20px 40px",
+        padding: "20px 5px",
       }}
     >
       <header
