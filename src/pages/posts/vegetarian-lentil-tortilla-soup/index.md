@@ -2,7 +2,7 @@
 title: Vegetarian Lentil Tortilla Soup
 date: "2020-02-24T22:40:32.169Z"
 description: Vegetarian Lentil Tortilla Soup. A soup with a burst of flavor, tons of texture, fiber galore, and so much nutrition!
-featurePhoto: "./feature-soup-image.jpg"
+cover: "./feature-soup-image.jpg"
 recipe:
   {
     prepTime: 5,
@@ -46,7 +46,6 @@ recipe:
   }
 ---
 
-![Vegetarian Lentil Tortilla Soup](./feature-soup-image.jpg)
 Lentil Tortilla Soup
 
 This is another vegetarian meal.

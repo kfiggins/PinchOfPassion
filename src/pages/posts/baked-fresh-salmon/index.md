@@ -2,7 +2,7 @@
 title: Baked Fresh Salmon
 date: "2020-02-24T22:40:32.169Z"
 description: A soup with a burst of flavor, tons of texture, fiber galore, and so much nutrition!
-featurePhoto: "./feature-salmon.jpg"
+cover: "./feature-salmon.jpg"
 recipe:
   {
     prepTime: 5,
@@ -31,7 +31,6 @@ recipe:
   }
 ---
 
-![Salmon](./feature-salmon.jpg)
 BAKED FRESH SALMON
 Baked Fresh Salmon
 I don’t know when exactly my love for salmon began, but I was at least 14 or 15 years old before I dared taste fish.
