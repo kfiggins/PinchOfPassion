@@ -6,9 +6,10 @@ import THEME from "../../theme"
 
 interface IProps {
   title: string
+  subTitle: string
 }
 
-export default ({ title }: IProps) => {
+export default ({ title, subTitle }: IProps) => {
   return (
     <Grid
       container={true}
@@ -22,10 +23,23 @@ export default ({ title }: IProps) => {
           fontSize: THEME.author.title.fontSize,
           marginTop: 20,
           marginBottom: 20,
+          fontWeight: 100,
+          letterSpacing: 10,
+          textSizeAdjust: "100%",
+          textAlign: "center"
         }}
       >
         {title}
       </h1>
+      <p
+        style={{
+          color: THEME.author.desc.color,
+          fontSize: THEME.author.desc.fontSize,
+          maxWidth: THEME.author.desc.maxWidth,
+          margin: "20px 0 0 0",
+          textAlign: "center",
+          fontFamily: "Caveat"
+        }}>{subTitle}</p>
     </Grid>
   )
 }

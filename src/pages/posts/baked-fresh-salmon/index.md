@@ -1,7 +1,7 @@
 ---
 title: Baked Fresh Salmon
 date: "2020-02-24T22:40:32.169Z"
-description: A soup with a burst of flavor, tons of texture, fiber galore, and so much nutrition!
+description: Fresh Baked Salmon with lemon, olive oil and a sprinkle of garlic salt. Healthy, fresh, light, delicious and totally satisfying. You’ll never need another salmon recipe again!
 cover: "./feature-salmon.jpg"
 recipe:
   {

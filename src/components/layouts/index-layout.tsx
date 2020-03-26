@@ -2,7 +2,6 @@ import * as React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import Responsive from "react-responsive"
 
-import Author from "../me/author"
 import Title from "./title"
 import AboutButton from "../me/about-button"
 import SocialNetworks from "../me/social-networks"
@@ -16,6 +15,7 @@ interface IDataProps {
   site: {
     siteMetadata: {
       title: string
+      subTitle: string
       author: {
         name: string
         image: string
@@ -56,8 +56,7 @@ const HeaderArea = ({ data, styles }: IHeaderArea) => (
         paddingBottom: styles.paddingBottom,
       }}
     >
-      <Title title={data.site.siteMetadata.title} />
-      <Author author={data.site.siteMetadata.author} />
+      <Title title={data.site.siteMetadata.title} subTitle={data.site.siteMetadata.subTitle} />
       <SocialNetworks networks={data.site.siteMetadata.networks} />
       <CallToActionButton />
     </div>
@@ -96,6 +95,7 @@ export default ({ children }) => (
         site {
           siteMetadata {
             title
+            subTitle
             author {
               name
               image
@@ -120,7 +120,7 @@ export default ({ children }) => (
         <Mobile>
           <IndexLayout
             data={data}
-            styles={{ paddingTop: 50, paddingBottom: 50 }}
+            styles={{ paddingTop: 20, paddingBottom: 20 }}
           >
             {children}
           </IndexLayout>
