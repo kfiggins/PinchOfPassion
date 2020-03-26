@@ -26,7 +26,8 @@ export default ({ title, subTitle }: IProps) => {
           fontWeight: 100,
           letterSpacing: 10,
           textSizeAdjust: "100%",
-          textAlign: "center"
+          textAlign: "center",
+          textTransform: "uppercase",
         }}
       >
         {title}

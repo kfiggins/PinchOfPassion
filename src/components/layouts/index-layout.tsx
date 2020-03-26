@@ -16,11 +16,6 @@ interface IDataProps {
     siteMetadata: {
       title: string
       subTitle: string
-      author: {
-        name: string
-        image: string
-        biography: string
-      }
       networks: string[]
     }
   }
@@ -96,11 +91,6 @@ export default ({ children }) => (
           siteMetadata {
             title
             subTitle
-            author {
-              name
-              image
-              biography
-            }
             networks
           }
         }

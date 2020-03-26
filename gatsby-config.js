@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: "A PINCH OF PASSION",
+    title: "A Pinch Of Passion",
     subTitle: "balancing health and happiness",
     author: {
       name: "Kaylee Figgins",

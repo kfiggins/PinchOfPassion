@@ -1,7 +1,4 @@
 import * as Typography from "typography"
-import lawtonTheme from "typography-theme-lawton"
-
-// const typography = new (<any>Typography)(lawtonTheme)
 
 const typography = new Typography({
   baseFontSize: "18px",

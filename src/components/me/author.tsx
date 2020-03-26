@@ -27,14 +27,15 @@ export default ({ author }: IProps) => {
             alignItems: "baseline",
             width: THEME.author.avatar.width,
             height: THEME.author.avatar.height,
+            marginBottom: 20
           }}
           src={withPrefix(author.image)}
           alt={author.name}
         />
       </Link>
-      <h1
+      {/* <h1
         style={{
-          color: THEME.author.title.color,
+          // color: THEME.author.title.color,
           fontSize: THEME.author.title.fontSize,
           marginTop: 20,
           marginBottom: 20,
@@ -44,7 +45,7 @@ export default ({ author }: IProps) => {
       </h1>
       <p
         style={{
-          color: THEME.author.desc.color,
+          // color: THEME.author.desc.color,
           fontSize: THEME.author.desc.fontSize,
           maxWidth: THEME.author.desc.maxWidth,
           margin: "auto",
@@ -53,7 +54,7 @@ export default ({ author }: IProps) => {
         }}
       >
         {author.biography}
-      </p>
+      </p> */}
     </Grid>
   )
 }
