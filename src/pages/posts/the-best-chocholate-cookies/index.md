@@ -18,7 +18,7 @@ recipe:
         "3 cups all purpose flour",
         "1 tsp salt",
         "1 tsp baking soda",
-        "1- 1 1/2 cups semisweet chocolate chips",
+        "1-1 1/2 cups semisweet chocolate chips",
       ],
     instructions:
       [

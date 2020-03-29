@@ -4,12 +4,13 @@ import Layout from "../components/layouts/blog-post-layout"
 import { FluidObject } from "gatsby-image"
 
 interface IBlogPost {
-  location: any,
+  location: any
   data: {
     markdownRemark: {
       html: string
       frontmatter: {
         title: string
+        description: string
         cover: {
           childImageSharp: {
             fluid: FluidObject
@@ -37,7 +38,13 @@ export default ({ data, location }: IBlogPost) => {
       : null
 
   return (
-    <Layout title={node.frontmatter.title} cover={cover} recipe={node.frontmatter.recipe} location={location}>
+    <Layout
+      title={node.frontmatter.title}
+      description={node.frontmatter.description}
+      cover={cover}
+      recipe={node.frontmatter.recipe}
+      location={location}
+    >
       {
         // tslint:disable:react-no-dangerous-html
         <div dangerouslySetInnerHTML={{ __html: node.html }} />
@@ -53,6 +60,7 @@ export const query = graphql`
       html
       frontmatter {
         title
+        description
         cover {
           childImageSharp {
             ... on ImageSharp {
@@ -75,10 +83,10 @@ export const query = graphql`
   }
 `
 
-      // featurePhoto {
-        //   childImageSharp {
-        //     fluid {
-        //       ...GatsbyImageSharpFluid
-        //     }
-        //   }
-        // }
+// featurePhoto {
+//   childImageSharp {
+//     fluid {
+//       ...GatsbyImageSharpFluid
+//     }
+//   }
+// }

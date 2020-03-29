@@ -6,6 +6,9 @@ import { FacebookProvider, Comments } from "react-facebook"
 
 import THEME from "../../theme"
 import FabButton from "../shared/FabButton"
+import Recipe, { IRecipe } from "../recipe"
+import { Link } from "gatsby"
+import { Button } from "@material-ui/core"
 
 const Mobile = props => <Responsive {...props} maxWidth={767} />
 const Default = props => <Responsive {...props} minWidth={768} />
@@ -13,7 +16,8 @@ const Default = props => <Responsive {...props} minWidth={768} />
 interface IContentAreaProps {
   children: React.ReactNode
   title: string
-  recipe: any
+  description: string
+  recipe: IRecipe
   location: any
 }
 
@@ -24,53 +28,43 @@ interface IHeaderArea {
 interface IBlogPostLayout {
   children: React.ReactNode
   title: string
+  description: string
   cover: FluidObject
-  recipe: any
+  recipe: IRecipe
   location: any
 }
 
-const ContentArea = ({ title, children, recipe, location }: IContentAreaProps) => (
+const ContentArea = ({
+  title,
+  children,
+  recipe,
+  location,
+  description,
+}: IContentAreaProps) => (
   <>
     <Default>
       <Card style={{ padding: 50 }}>
         <h1 style={{ marginBottom: 30, marginTop: 0, textAlign: "center" }}>
           {title}
         </h1>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            marginBottom: "30px",
+          }}
+        >
+          <Link
+            className="gatsby-resp-image-link"
+            to={`${location.pathname}#recipe`}
+            style={{ textDecoration: "none" }}
+          >
+            <Button variant="outlined">Jump to Recipe</Button>
+          </Link>
+        </div>
         {children}
         {recipe && (
-          <div>
-            <div style={{ fontWeight: "bold" }}>{title}</div>
-            <div>Prep Time: {recipe.prepTime}</div>
-            <div>Cook Time: {recipe.cookTime}</div>
-            {recipe.servings && <div>Servings: recipe.servings</div>}
-            <div>
-              <h4>Ingredients</h4>
-              <ul>
-                {recipe.ingredients &&
-                  recipe.ingredients.map((item, index) => (
-                    <li key={index}>{item}</li>
-                  ))}
-              </ul>
-            </div>
-            <div>
-              <h4>Instructions</h4>
-              <ol>
-                {recipe.instructions &&
-                  recipe.instructions.map((item, index) => (
-                    <li key={index}>{item}</li>
-                  ))}
-              </ol>
-            </div>
-            <div>
-              <h4>Notes</h4>
-              <ul>
-                {recipe.notes &&
-                  recipe.notes.map((item, index) => (
-                    <li key={index}>{item}</li>
-                  ))}
-              </ul>
-            </div>
-          </div>
+          <Recipe recipe={recipe} title={title} description={description} />
         )}
         <FacebookProvider appId="560650034801447">
           <Comments href={location.href} />
@@ -90,41 +84,24 @@ const ContentArea = ({ title, children, recipe, location }: IContentAreaProps) =
         >
           {title}
         </h1>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            marginBottom: "30px",
+          }}
+        >
+          <Link
+            className="gatsby-resp-image-link"
+            to={`${location.pathname}#recipe`}
+            style={{ textDecoration: "none" }}
+          >
+            <Button variant="outlined">Jump to Recipe</Button>
+          </Link>
+        </div>
         {children}
         {recipe && (
-          <div>
-            <div style={{ fontWeight: "bold" }}>{title}</div>
-            <div>Prep Time: {recipe.prepTime}</div>
-            <div>Cook Time: {recipe.cookTime}</div>
-            {recipe.servings && <div>Servings: recipe.servings</div>}
-            <div>
-              <h4>Ingredients</h4>
-              <ul>
-                {recipe.ingredients &&
-                  recipe.ingredients.map((item, index) => (
-                    <li key={index}>{item}</li>
-                  ))}
-              </ul>
-            </div>
-            <div>
-              <h4>Instructions</h4>
-              <ol>
-                {recipe.instructions &&
-                  recipe.instructions.map((item, index) => (
-                    <li key={index}>{item}</li>
-                  ))}
-              </ol>
-            </div>
-            <div>
-              <h4>Notes</h4>
-              <ul>
-                {recipe.notes &&
-                  recipe.notes.map((item, index) => (
-                    <li key={index}>{item}</li>
-                  ))}
-              </ul>
-            </div>
-          </div>
+          <Recipe recipe={recipe} title={title} description={description} />
         )}
         <FacebookProvider appId="560650034801447">
           <Comments href={location.href} />
@@ -147,7 +124,14 @@ const HeaderArea = ({ cover }: IHeaderArea) => {
   )
 }
 
-export default ({ title, cover, children, recipe, location }: IBlogPostLayout) => {
+export default ({
+  title,
+  description,
+  cover,
+  children,
+  recipe,
+  location,
+}: IBlogPostLayout) => {
   return (
     <div style={{ backgroundColor: THEME.blogPost.layout.backgroundColor }}>
       <Default>
@@ -162,12 +146,26 @@ export default ({ title, cover, children, recipe, location }: IBlogPostLayout) =
           }}
         >
           <HeaderArea cover={cover} />
-          <ContentArea title={title} recipe={recipe} location={location}>{children}</ContentArea>
+          <ContentArea
+            title={title}
+            recipe={recipe}
+            location={location}
+            description={description}
+          >
+            {children}
+          </ContentArea>
         </div>
       </Default>
       <Mobile>
         <HeaderArea cover={cover} />
-        <ContentArea title={title} recipe={recipe} location={location}>{children}</ContentArea>
+        <ContentArea
+          title={title}
+          recipe={recipe}
+          location={location}
+          description={description}
+        >
+          {children}
+        </ContentArea>
       </Mobile>
     </div>
   )
