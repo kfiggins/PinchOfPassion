@@ -55,7 +55,6 @@ const ContentArea = ({
           }}
         >
           <Link
-            className="gatsby-resp-image-link"
             to={`${location.pathname}#recipe`}
             style={{ textDecoration: "none" }}
           >
@@ -92,7 +91,6 @@ const ContentArea = ({
           }}
         >
           <Link
-            className="gatsby-resp-image-link"
             to={`${location.pathname}#recipe`}
             style={{ textDecoration: "none" }}
           >
