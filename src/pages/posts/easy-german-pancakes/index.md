@@ -3,6 +3,7 @@ title: Easy German Pancakes
 date: "2020-02-04"
 description: Easy and delicious baked German Pancakes made from ingredients already in your fridge to give you a breakfast you can truly enjoy.
 cover: "./feature-german.jpg"
+coverList: "./list-cover.jpg"
 recipe:
   {
     prepTime: 5,

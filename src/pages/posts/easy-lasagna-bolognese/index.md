@@ -3,6 +3,7 @@ title: Easy Lasagna Bolognese (Freezer Friendly!)
 date: "2020-02-11"
 description: Easy Lasagna Bolognese. A delicious, approachable, and simple recipe for savory meat lasagna that can be cooked immediately or prepared and used as a freezer meal.
 cover: "./feature-lasagna.jpg"
+coverList: "./list-cover.jpg"
 recipe:
   {
     prepTime: 20,

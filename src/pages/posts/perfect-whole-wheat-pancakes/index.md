@@ -3,6 +3,7 @@ title: Perfect Whole Wheat Pancakes
 date: "2020-01-21"
 description: Perfect, Fluffy, Filling, Healthy Whole Wheat Pancakes.
 cover: "./feature-pancake.jpg"
+coverList: "./list-cover.jpg"
 recipe:
   {
     prepTime: 5,

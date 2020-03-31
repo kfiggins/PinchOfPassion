@@ -68,6 +68,15 @@ export const query = graphql`
                 }
               }
             }
+            coverList {
+              childImageSharp {
+                ... on ImageSharp {
+                  fluid(maxWidth: 800, maxHeight: 400) {
+                    ...GatsbyImageSharpFluid_withWebp
+                  }
+                }
+              }
+            }
           }
           fields {
             slug

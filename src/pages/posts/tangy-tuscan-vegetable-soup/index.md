@@ -3,6 +3,7 @@ title: Tangy Tuscan Vegetable Soup
 date: "2020-01-28"
 description: Tangy Vegetarian Tuscan Bean Soup
 cover: "./feature-soup.jpg"
+coverList: "./list-cover.jpg"
 recipe:
   {
     prepTime: 130,

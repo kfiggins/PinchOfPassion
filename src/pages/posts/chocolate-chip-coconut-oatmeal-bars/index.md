@@ -3,6 +3,7 @@ title: Chocolate Chip Coconut Oatmeal Bars
 date: "2020-01-28"
 description: Healthy Baked Oatmeal Chocolate Chip Bars with Toasted Coconut
 cover: "./feature-bar.jpg"
+coverList: "./list-cover.jpg"
 recipe:
   {
     prepTime: 5,

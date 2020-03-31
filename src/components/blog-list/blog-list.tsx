@@ -21,7 +21,7 @@ interface IProps {
       date: string
       title: string
       description: string
-      cover?: {
+      coverList?: {
         childImageSharp?: {
           fluid: FluidObject | null
         }
@@ -76,9 +76,9 @@ class BlogListDesktop extends React.Component<IProps, {}> {
                 title: node.frontmatter.title,
                 description: node.frontmatter.description,
                 coverFluid:
-                  node.frontmatter.cover &&
-                  node.frontmatter.cover.childImageSharp
-                    ? node.frontmatter.cover.childImageSharp.fluid
+                  node.frontmatter.coverList &&
+                  node.frontmatter.coverList.childImageSharp
+                    ? node.frontmatter.coverList.childImageSharp.fluid
                     : null,
               }}
             />
@@ -111,9 +111,9 @@ class BlogListMobile extends React.Component<IProps, {}> {
                 title: node.frontmatter.title,
                 description: node.frontmatter.description,
                 coverFluid:
-                  node.frontmatter.cover &&
-                  node.frontmatter.cover.childImageSharp
-                    ? node.frontmatter.cover.childImageSharp.fluid
+                  node.frontmatter.coverList &&
+                  node.frontmatter.coverList.childImageSharp
+                    ? node.frontmatter.coverList.childImageSharp.fluid
                     : null,
               }}
             />

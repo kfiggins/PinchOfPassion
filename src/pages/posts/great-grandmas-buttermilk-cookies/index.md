@@ -3,6 +3,7 @@ title: Great Grandma's Buttermilk Cookies
 date: "2020-02-18"
 description: Great Grandma’s Buttermilk Cookies. All the fluffiness and comfort food feels of a homemade biscuit with the sweetness of a cookie.
 cover: "./feature-buttermilk.jpg"
+coverList: "./list-cover.jpg"
 recipe:
   {
     prepTime: 130,

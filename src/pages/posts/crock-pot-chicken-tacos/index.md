@@ -3,6 +3,7 @@ title: Crock Pot Chicken Tacos
 date: "2020-02-04"
 description: Delicious, Easy, Flavorful Crock Pot Chicken Tacos with the perfect blend of spices and my secret ingredient that will make your taco Tuesday (or any day!) a Tuesday to remember.
 cover: "./feature-taco.jpg"
+coverList: "./list-cover.jpg"
 recipe:
   {
     prepTime: 5,

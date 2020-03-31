@@ -3,6 +3,7 @@ title: Thai Green Vegetable Curry
 date: "2020-01-22"
 description: Cozy, Light, Delicious Vegetarian Thai Green Curry with Rice.
 cover: "./feature-thai.jpg"
+coverList: "./list-cover.jpg"
 recipe:
   {
     prepTime: 5,

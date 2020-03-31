@@ -3,6 +3,7 @@ title: Creamy Garlic Parmesan Shrimp Pasta
 date: "2020-02-14"
 description: Creamy Garlic Parmesan Shrimp Pasta. A delicious, indulgent, rich, creamy, flavorful Parmesan pasta dish topped with perfectly seasoned shrimp.
 cover: "./feature-pasta.jpg"
+coverList: "./list-cover.jpg"
 recipe:
   {
     prepTime: 5,

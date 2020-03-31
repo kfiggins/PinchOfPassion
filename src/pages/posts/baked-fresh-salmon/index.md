@@ -3,6 +3,7 @@ title: Baked Fresh Salmon
 date: "2020-02-24T22:40:32.169Z"
 description: Fresh Baked Salmon with lemon, olive oil and a sprinkle of garlic salt. Healthy, fresh, light, delicious and totally satisfying. You’ll never need another salmon recipe again!
 cover: "./feature-salmon.jpg"
+coverList: "./list-cover.jpg"
 recipe:
   {
     prepTime: 5,
