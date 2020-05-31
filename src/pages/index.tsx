@@ -1,8 +1,17 @@
-import * as React from "react"
+import React, { useState } from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layouts/index-layout"
 import BlogList from "../components/blog-list/blog-list"
 import { FluidObject } from "gatsby-image"
+import {
+  TextField,
+  InputAdornment,
+  OutlinedInput,
+  InputLabel,
+  FormControl,
+} from "@material-ui/core"
+import SearchIcon from "@material-ui/icons/Search"
+import SearchRecipes from "../components/layouts/search-recipes"
 
 interface IProps {
   data: {
@@ -31,19 +40,21 @@ interface IProps {
   }
 }
 
-class Index extends React.Component<IProps> {
-  render() {
-    const posts = this.props.data.allMarkdownRemark.edges.map(
-      (e: any) => e.node
-    )
-    const totalCount = this.props.data.allMarkdownRemark.totalCount
+function Index(props) {
+  const [filteredPosts, setFilteredPosts] = useState([])
+  const [query, setQuery] = useState("")
 
-    return (
-      <Layout>
-        <BlogList posts={posts} totalCount={totalCount} />
-      </Layout>
-    )
-  }
+  const posts = props.data.allMarkdownRemark.edges.map((e: any) => e.node)
+  const totalCount = props.data.allMarkdownRemark.totalCount
+
+  const hasSearchResults = filteredPosts && query !== ""
+  const finalPosts = hasSearchResults ? filteredPosts : posts
+  return (
+    <Layout>
+      <SearchRecipes {...{ posts, setQuery, setFilteredPosts }} />
+      <BlogList posts={finalPosts} totalCount={totalCount} />
+    </Layout>
+  )
 }
 
 export default Index

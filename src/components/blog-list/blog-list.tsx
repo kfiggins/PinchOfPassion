@@ -69,6 +69,7 @@ class BlogListDesktop extends React.Component<IProps, {}> {
       <div style={{ minHeight: "50vh" }}>
         {this.props.posts.slice(0, blogPostStore.postsToShow).map(node => (
           <div key={node.id}>
+            {console.log(node)}
             <BlogListElement
               data={{
                 slug: node.fields.slug,
