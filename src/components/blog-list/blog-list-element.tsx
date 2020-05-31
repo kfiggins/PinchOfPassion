@@ -8,7 +8,7 @@ import CardContent from "@material-ui/core/CardContent"
 import Typography from "@material-ui/core/Typography"
 import Avatar from "@material-ui/core/Avatar"
 import CardHeader from "@material-ui/core/CardHeader"
-import THEME from "../../theme";
+import THEME from "../../theme"
 
 interface IBlogListElement {
   data: {
@@ -32,17 +32,17 @@ export default ({ data }: IBlogListElement) => (
           }}
         >
           <CardHeader
-            avatar={
-              <Avatar
-                style={{ 
-                  backgroundColor: THEME.blogListElement.avatar.backgroundColor,
-                  color: THEME.blogListElement.avatar.color, 
-                  textShadow: "none" 
-                }}
-              >
-                {data.title.charAt(0).toUpperCase()}
-              </Avatar>
-            }
+            // avatar={
+            //   <Avatar
+            //     style={{
+            //       backgroundColor: THEME.blogListElement.avatar.backgroundColor,
+            //       color: THEME.blogListElement.avatar.color,
+            //       textShadow: "none"
+            //     }}
+            //   >
+            //     {data.title.charAt(0).toUpperCase()}
+            //   </Avatar>
+            // }
             title={data.title}
             subheader={data.date}
           />
